@@ -33,6 +33,9 @@ highlight Folded ctermbg=black ctermfg=darkred
 
 "   ---   Mappings   ---
 
+" Makes opening nerdtree faster
+map <Leader>n <plug>NERDTreeTabsToggle<CR> 
+
 " cd to directory of current file
 map c :cd %:p:h
 
