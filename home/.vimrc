@@ -31,6 +31,12 @@ set foldmethod=indent
 highlight FoldColumn ctermbg=black ctermfg=darkred
 highlight Folded ctermbg=black ctermfg=darkred
 
+
+" -- nerdtree settings --
+let NERDTreeWinSize=40 " sidebar width. default: 31
+let NERDTreeCasadeOpenSingleChildDir=1 " recursively opens dirs with one child dir. default: 0
+let NERDTreeShowBookmarks=1 " automatically show bookmarks menu. default: 0
+
 "   ---   Mappings   ---
 
 " Makes opening nerdtree faster
