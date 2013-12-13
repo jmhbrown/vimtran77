@@ -7,9 +7,9 @@ filetype plugin indent on
 
 " tab settings
 set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 
 set number                      " show line numbers
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
@@ -19,6 +19,9 @@ set ruler                       " show the cursor position all the time
 set guifont=Courier\ New        " nice font
 set nobackup                    " don't make swp files
 
+" easier window switching
+noremap <S-Left> <C-w>h
+noremap <S-Right> <C-w>l
 
 " highlight current line
 set cursorline 
@@ -44,29 +47,3 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 " cd to directory of current file
 map c :cd %:p:h
-
-"  --  bracket completion  --
-" basic competion
-inoremap { {}<Left>
-inoremap {<CR> {<CR>}<Esc>O
-inoremap {{ {
-inoremap {} {}
-inoremap <expr> } strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
-
-inoremap ( ()<Left>
-inoremap (<CR> (<CR>)<Esc>O
-inoremap (( (
-inoremap () ()
-inoremap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
-
-inoremap < <><Left>
-inoremap <<CR> <<CR>><Esc>O
-inoremap << <
-inoremap <> <>
-inoremap <expr> > strpart(getline('.'), col('.')-1, 1) == ">" ? "\<Right>" : ">"
-
-inoremap [ []<Left>
-inoremap [<CR> [<CR>]<Esc>O
-inoremap [[ [
-inoremap [] []
-inoremap <expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
