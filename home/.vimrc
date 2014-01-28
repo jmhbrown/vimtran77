@@ -16,6 +16,7 @@ set history=1000                " remember more commands and search history
 set undolevels=1000             " use many levels of undo
 set ruler                       " show the cursor position all the time
 set guifont=Courier\ New        " nice font
+set mouse=a
 
 " easier window switching
 noremap <S-Left> <C-w>h
@@ -42,6 +43,3 @@ let NERDTreeShowBookmarks=1 " automatically show bookmarks menu. default: 0
 
 " Makes opening nerdtree faster
 map <Leader>n <plug>NERDTreeTabsToggle<CR> 
-
-" cd to directory of current file
-map c :cd %:p:h
