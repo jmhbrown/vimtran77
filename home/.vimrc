@@ -2,7 +2,6 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 
-
 " ---- Settings ---
 
 " tab settings
@@ -17,7 +16,6 @@ set history=1000                " remember more commands and search history
 set undolevels=1000             " use many levels of undo
 set ruler                       " show the cursor position all the time
 set guifont=Courier\ New        " nice font
-set nobackup                    " don't make swp files
 
 " easier window switching
 noremap <S-Left> <C-w>h
