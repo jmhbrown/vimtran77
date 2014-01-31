@@ -28,5 +28,5 @@ This repo is set up to be compatible with homesick. You can also set it up manua
 
 ```
 ln -s <path to vimtran77>/home/.vim ~/.vim
-ln -a <path to vimtran77>/home/.vimrc ~/.vimrc
+ln -s <path to vimtran77>/home/.vimrc ~/.vimrc
 ```
