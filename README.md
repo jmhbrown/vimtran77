@@ -19,6 +19,7 @@ Notable shortcuts and commands
 * `\c$` : comment out the rest of the current line 
 * `:Gdiff` : compare staged and working tree versions of files
 * `:Gcommit` : commits staged files
+* `ctrl-p` : opens autocompletion menu
 
 
 Installation

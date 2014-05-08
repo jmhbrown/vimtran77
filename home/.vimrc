@@ -25,12 +25,12 @@ noremap <S-Up> <C-w>k
 noremap <S-Down> <C-w>j
 
 " highlight current line
-set cursorline 
+set cursorline
 set modeline
 set modelines=5
 highlight CursorLine cterm=bold
 
-" collapse things between certain tags. (I'm not sure how exactly this works.)
+" collapse tabbed lines
 set foldmethod=indent
 highlight FoldColumn ctermbg=0 ctermfg=152
 highlight Folded ctermbg=0 ctermfg=152
@@ -45,10 +45,11 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 " -- vim-airline settings --
 function! AirlineInit()
-  let g:airline_section_a = airline#section#create(['%f'])
+  let g:airline_section_a = airline#section#create(['<（ ° Д °）'])
   let g:airline_section_b = airline#section#create(['branch'])
   let g:airline_section_z = airline#section#create_right(['l:%l,c:%c'])
 endfunction
 autocmd VimEnter * call AirlineInit()
-" don't check for whitespace
+" don't check for whitespace this is easy to toggle with
+" AirplaneToggleWhitespace
 let g:airline#extensions#whitespace#enabled = 0
