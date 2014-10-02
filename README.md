@@ -1,14 +1,25 @@
 vimtran77
 =========
 
-A few shortcuts and formatting settings. Also includes better directory browsing with Nerd Tree/Nerd Tree Tabs, some fancy commenting with Nerd Commenter, and some extra sanity with Vim Sensible and Vim Fugitive.
+A few shortcuts, addons and formatting settings.
 
-Notable shortcuts
+Extensions
+* [Vim-Fugitive](https://github.com/tpope/vim-fugitive) - Git Integration
+* [Vim-Sensible](https://github.com/tpope/vim-sensible) - Sanity
+* [Vim-Airline](https://github.com/bling/vim-airline) - Fancy Status Bar
+* [NerdTree](https://github.com/scrooloose/nerdtree) - Directory Browsing
+* [Vim-NerdTree-Tabs](https://github.com/jistr/vim-nerdtree-tabs) - Better Directory Browsing
+* [NerdCommenter](https://github.com/scrooloose/nerdcommenter) - Fancy Commenting
+
+Notable shortcuts and commands
 * `\n` : toggles nerdtree
 * `shift-i` : show dot files in nerdtree 
-* `shift-right` `shift-left` : switch between split screen buffers.
+* `shift-right` `shift-left` `shift-up` `shift-down`: switch between split screen buffers.
 * `\ci` : toggle commenting for current line or highlighted text
 * `\c$` : comment out the rest of the current line 
+* `:Gdiff` : compare staged and working tree versions of files
+* `:Gcommit` : commits staged files
+* `ctrl-p` : opens autocompletion menu
 
 
 Installation
