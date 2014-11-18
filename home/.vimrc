@@ -17,7 +17,7 @@ set history=1000                " remember more commands and search history
 set undolevels=1000             " use many levels of undo
 set ruler                       " show the cursor position all the time
 set guifont=Courier\ New        " nice font
-set mouse=a
+set mouse=                      " using mouse disables copying to system clipboard
 
 " easier window switching
 noremap <S-Left> <C-w>h
@@ -35,20 +35,23 @@ set modeline
 set modelines=5
 highlight CursorLine cterm=bold
 
-" collapse tabbed lines
-set foldmethod=indent
-highlight FoldColumn ctermbg=0 ctermfg=152
-highlight Folded ctermbg=0 ctermfg=152
-
+" Pmenu colors - not working?Q 
+highlight Pmenu guibg=238 gui=bold
 
 " -- nerdtree settings --
 let NERDTreeWinSize=40 " sidebar width. default: 31
 let NERDTreeCasadeOpenSingleChildDir=1 " recursively opens dirs with one child dir. default: 0
 let NERDTreeShowBookmarks=1 " automatically show bookmarks menu. default: 0
 " Makes opening nerdtree faster
-map <Leader>n <plug>NERDTreeTabsToggle<CR> 
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 " -- vim-airline settings --
+let g:airline#extensions#whitespace#enabled = 1 " show trailing whitespace errors default: 1
+let g:airline#extensions#whitespace#mixed_indent_algo = 1 " show mixed space/tabs warning default: 0
+let g:airline#extensions#whitespace#symbol = '⇒'
+let g:airline#extensions#whitespace#trailing_format = 'tr[%s]'
+let g:airline#extensions#whitespace#mixed_indent_format = 'mi[%s]'
+let g:airline#extensions#whitespace#checks = [ 'trailing', 'indent' ]
 " buffer bar
 function! AirlineInit()
   let g:airline_section_a = airline#section#create(['<（ ° Д °）'])
