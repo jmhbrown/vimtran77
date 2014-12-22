@@ -35,11 +35,32 @@ set modeline
 set modelines=5
 highlight CursorLine cterm=bold
 
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+" Only define it when not defined already.
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+		  \ | wincmd p | diffthis
+endif
+
+" - syntax highlighting -
+au BufNewFile,BufRead *.erb set filetype=ruby
+" BIND zone
+au BufNewFile,BufRead */bind/master/*,*/bind/slave/*,*/bind/arpa/* call s:StarSetf('bindzone')
+" BIND configuration
+au BufNewFile,BufRead arpa.conf,named*.conf set filetype=named
+
+" show syntax information by hitting \h
+map <Leader>h :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+
 " Pmenu colors - not working?Q 
 highlight Pmenu guibg=238 gui=bold
 
 " -- nerdtree settings --
-let NERDTreeWinSize=40 " sidebar width. default: 31
+let NERDTreeChDirMode=2 " CWD is changed to nerdtree's root. default: 0
 let NERDTreeCasadeOpenSingleChildDir=1 " recursively opens dirs with one child dir. default: 0
 let NERDTreeShowBookmarks=1 " automatically show bookmarks menu. default: 0
 " Makes opening nerdtree faster
