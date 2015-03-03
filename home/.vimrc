@@ -18,6 +18,7 @@ set undolevels=1000             " use many levels of undo
 set ruler                       " show the cursor position all the time
 set guifont=Courier\ New        " nice font
 set mouse=                      " using mouse disables copying to system clipboard
+set foldmethod=marker           " use {{{ and }}} to mark folds
 
 " easier window switching
 noremap <S-Left> <C-w>h
