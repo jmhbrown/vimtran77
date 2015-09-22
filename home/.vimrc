@@ -45,7 +45,7 @@ if !exists(":DiffOrig")
 endif
 
 " - syntax highlighting -
-au BufNewFile,BufRead *.erb set filetype=ruby
+au BufNewFile,BufRead *.erb,*.pp set filetype=ruby
 " BIND zone
 au BufNewFile,BufRead */bind/master/*,*/bind/slave/*,*/bind/arpa/* call s:StarSetf('bindzone')
 " BIND configuration
