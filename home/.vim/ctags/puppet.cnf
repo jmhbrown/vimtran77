@@ -1,0 +1,11 @@
+--langdef=puppet
+--langmap=puppet:.pp
+--regex-puppet=/^[ \t]*class[ \t]*([:a-zA-Z0-9_\-]+)[ \t]*/\1/c,class/
+--regex-puppet=/^[ \t]*site[ \t]*([a-zA-Z0-9_\-]+)[ \t]*/\1/s,site/
+--regex-puppet=/^[ \t]*node[ \t]*([a-zA-Z0-9_\-]+)[ \t]*/\1/n,node/
+--regex-puppet=/^[ \t]*node[ \t]*['"]([a-zA-Z0-9_\-]+)['"][ \t]*\{/\1/n,node/
+--regex-puppet=/^[ \t]*define[ \t]*([:a-zA-Z0-9_\-]+)[ \t]*/\1/d,definition/
+--regex-puppet=/^[ \t]*file[ \t]*\{[ \t]*['"]*([^ \t'"]+)['"]*[ \t]*/\1/f,file/
+--regex-puppet=/^[ \t]*File[ \t]*\[[ \t]*['"]([^'"]+)['"][ \t]*\][ \t]*/\1/f,file/
+--regex-puppet=/^[ \t]*include[ \t]*([^ \t]+)[ \t]*/\1/i,include/ 
+--regex-puppet=/^.*(\$[a-zA-Z0-9_:]+)[ \t]*=[^=].*/\1/v,variable/

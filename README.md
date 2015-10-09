@@ -5,10 +5,11 @@ A few shortcuts, addons and formatting settings.
 
 Extensions
 * [Vim-Fugitive](https://github.com/tpope/vim-fugitive) - Git Integration
-* [Vim-Sensible](https://github.com/tpope/vim-sensible) - Sanity
+* [Vim-Sensible](https://github.com/tpope/vim-sensible) - Some Sane Defaults
 * [Vim-Airline](https://github.com/bling/vim-airline) - Fancy Status Bar
 * [NerdTree](https://github.com/scrooloose/nerdtree) - Directory Browsing
-* [Vim-NerdTree-Tabs](https://github.com/jistr/vim-nerdtree-tabs) - Better Directory Browsing
+* [Vim-NerdTree-Tabs](https://github.com/jistr/vim-nerdtree-tabs) - Directory Browsing Works Well With Tabs
+* [Taglist](https://github.com/vim-scripts/taglist.vim) - 
 * [NerdCommenter](https://github.com/scrooloose/nerdcommenter) - Fancy Commenting
 
 Notable shortcuts and commands
@@ -20,7 +21,11 @@ Notable shortcuts and commands
 * `:Gdiff` : compare staged and working tree versions of files
 * `:Gcommit` : commits staged files
 * `ctrl-p` : opens autocompletion menu
+* `shift-t right` `shift-t left` : switch between tabs
+* `shift-t n` : open a new tab
 
+Other Additions
+* [Puppet syntax highlighting](https://raw.githubusercontent.com/puppetlabs/puppet-syntax-vim/master/syntax/puppet.vim)
 
 Installation
 ------------

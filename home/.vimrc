@@ -29,6 +29,9 @@ noremap <S-h> <C-w>h
 noremap <S-l> <C-w>l
 noremap <S-k> <C-w>k
 noremap <S-j> <C-w>j
+noremap <S-t><Left> :tabNext<CR>
+noremap <S-t><Right> :tabnext<CR>
+noremap <S-t>n :tabnew<CR>
 
 " highlight current line
 set cursorline
@@ -45,7 +48,7 @@ if !exists(":DiffOrig")
 endif
 
 " - syntax highlighting -
-au BufNewFile,BufRead *.erb,*.pp set filetype=ruby
+au BufNewFile,BufRead *.pp set filetype=puppet
 " BIND zone
 au BufNewFile,BufRead */bind/master/*,*/bind/slave/*,*/bind/arpa/* call s:StarSetf('bindzone')
 " BIND configuration
@@ -67,6 +70,25 @@ let NERDTreeShowBookmarks=1 " automatically show bookmarks menu. default: 0
 " Makes opening nerdtree faster
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
+
+" -- tagbar settings --
+" makes opening the taglist faster
+map <Leader>t :TagbarToggle<CR>
+" support for puppet
+let g:tagbar_type_puppet = {
+    \ 'ctagstype': 'puppet',
+    \ 'deffile': '~/.vim/ctags/puppet.cnf',
+    \ 'kinds': [
+        \'c:class',
+        \'i:include',
+        \'s:site',
+        \'n:node',
+        \'f:file:1',
+        \'v:variable:1',
+        \'d:definition'
+      \]
+    \}
+
 " -- vim-airline settings --
 let g:airline#extensions#whitespace#enabled = 1 " show trailing whitespace errors default: 1
 let g:airline#extensions#whitespace#mixed_indent_algo = 1 " show mixed space/tabs warning default: 0
@@ -74,6 +96,7 @@ let g:airline#extensions#whitespace#symbol = '⇒'
 let g:airline#extensions#whitespace#trailing_format = 'tr[%s]'
 let g:airline#extensions#whitespace#mixed_indent_format = 'mi[%s]'
 let g:airline#extensions#whitespace#checks = [ 'trailing', 'indent' ]
+let g:airline#extensions#tabline#enabled = 1
 " buffer bar
 function! AirlineInit()
   let g:airline_section_a = airline#section#create(['<（ ° Д °）'])
