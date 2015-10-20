@@ -19,3 +19,6 @@
 [submodule "home/.vim/bundle/tagbar"]
 	path = home/.vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar
+[submodule "showmarks"]
+	path = home/.vim/bundle/ShowMarks
+	url = https://github.com/vim-scripts/ShowMarks.git
