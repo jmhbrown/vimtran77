@@ -67,9 +67,22 @@ highlight Pmenu guibg=238 gui=bold
 let NERDTreeChDirMode=2 " CWD is changed to nerdtree's root. default: 0
 let NERDTreeCasadeOpenSingleChildDir=1 " recursively opens dirs with one child dir. default: 0
 let NERDTreeShowBookmarks=1 " automatically show bookmarks menu. default: 0
+function CreateTags()
+    if exists("g:NERDTreeFileNode.GetSelected()")
+      let curNodePath = g:NERDTreeFileNode.GetSelected().path.str()
+      exec ':!ctags -R --languages=java -f ' . curNodePatDTreeFileNode.GetSelected().path.str()
+    else 
+     echo "Not applicable outside fo NERDTree buffer."
+   endif
+endfunction
+nmap <silent> <F4> :call CreateTags()<CR>
 " Makes opening nerdtree faster
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
+" -- showmark settings --
+let g:showmarks_textlower="\t:"
+let g:showmarks_textupper="\t:"
+let g:showmarks_include="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 
 " -- tagbar settings --
 " makes opening the taglist faster

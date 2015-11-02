@@ -9,7 +9,7 @@ Extensions
 * [Vim-Airline](https://github.com/bling/vim-airline) - Fancy Status Bar
 * [NerdTree](https://github.com/scrooloose/nerdtree) - Directory Browsing
 * [Vim-NerdTree-Tabs](https://github.com/jistr/vim-nerdtree-tabs) - Directory Browsing Works Well With Tabs
-* [Taglist](https://github.com/vim-scripts/taglist.vim) - Generate/View tags for current buffer
+* [Tagbar](https://github.com/majutsushi/tagbar) - Generate/View tags for current buffer
 * [NerdCommenter](https://github.com/scrooloose/nerdcommenter) - Fancy Commenting
 * [ShowMarks](https://github.com/vim-scripts/showmarks) - Show marks
 
