@@ -9,9 +9,9 @@ Extensions
 * [Vim-Airline](https://github.com/bling/vim-airline) - Fancy Status Bar
 * [NerdTree](https://github.com/scrooloose/nerdtree) - Directory Browsing
 * [Vim-NerdTree-Tabs](https://github.com/jistr/vim-nerdtree-tabs) - Directory Browsing Works Well With Tabs
+* [Nerdtree-Git-Plugin](https://github.com/Xuyuanp/nerdtree-git-plugin) - Git status in NERDTree
 * [Tagbar](https://github.com/majutsushi/tagbar) - Generate/View tags for current buffer
 * [NerdCommenter](https://github.com/scrooloose/nerdcommenter) - Fancy Commenting
-* [ShowMarks](https://github.com/vim-scripts/showmarks) - Show marks
 
 Notable shortcuts and commands
 * `\n` : toggles nerdtree
@@ -24,7 +24,6 @@ Notable shortcuts and commands
 * `ctrl-p` : opens autocompletion menu
 * `shift-t right` `shift-t left` : switch between tabs
 * `shift-t n` : open a new tab
-* `\mt` : toggle marks
 
 Other Additions
 * [Puppet syntax highlighting](https://raw.githubusercontent.com/puppetlabs/puppet-syntax-vim/master/syntax/puppet.vim)
