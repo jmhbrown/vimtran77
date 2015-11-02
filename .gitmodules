@@ -22,3 +22,6 @@
 [submodule "showmarks"]
 	path = home/.vim/bundle/ShowMarks
 	url = https://github.com/vim-scripts/ShowMarks.git
+[submodule "nerdtree-git-plugin"]
+	path = home/.vim/bundle/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
