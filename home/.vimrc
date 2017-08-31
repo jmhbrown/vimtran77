@@ -53,6 +53,8 @@ au BufNewFile,BufRead *.pp set filetype=puppet
 au BufNewFile,BufRead */bind/master/*,*/bind/slave/*,*/bind/arpa/* call s:StarSetf('bindzone')
 " BIND configuration
 au BufNewFile,BufRead arpa.conf,named*.conf set filetype=named
+" Sage files
+au BufNewFile,BufRead *.sage set filetype=python
 
 " show syntax information by hitting \h
 map <Leader>h :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
