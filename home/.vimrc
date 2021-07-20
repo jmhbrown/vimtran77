@@ -63,7 +63,7 @@ map <Leader>h :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> t
 
 
 " Pmenu colors - not working?Q 
-highlight Pmenu guibg=238 gui=bold
+" highlight Pmenu guibg=238 gui=bold
 
 " -- nerdtree settings --
 let NERDTreeChDirMode=2 " CWD is changed to nerdtree's root. default: 0
