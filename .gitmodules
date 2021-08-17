@@ -22,3 +22,6 @@
 [submodule "nerdtree-git-plugin"]
 	path = home/.vim/bundle/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "home/.vim/bundle/vimtex"]
+	path = home/.vim/bundle/vimtex
+	url = https://github.com/lervag/vimtex.git
