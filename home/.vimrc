@@ -102,6 +102,41 @@ let g:tagbar_type_puppet = {
       \]
     \}
 
+" support for bib
+let g:tagbar_type_bib = {
+    \ 'ctagstype' : 'bib',
+    \ 'deffile': '~/.vim/ctags/bib.cnf',
+    \ 'kinds'     : [
+      \ 'a:Articles',
+      \ 'b:Books',
+      \ 'L:Booklets',
+      \ 'c:Conferences',
+      \ 'B:Inbook',
+      \ 'C:Incollection',
+      \ 'P:Inproceedings',
+      \ 'm:Manuals',
+      \ 'T:Masterstheses',
+      \ 'M:Misc',
+      \ 't:Phdtheses',
+      \ 'p:Proceedings',
+      \ 'r:Techreports',
+      \ 'u:Unpublished',
+    \]
+  \}
+
+" support for tex
+let g:tagbar_type_tex = {
+    \ 'ctagstype': 'latex',
+    \ 'deffile' : '~/.vim/ctags/latex.cnf',
+    \ 'kinds'     : [
+        \ 's:sections',
+        \ 'g:graphics:0:0',
+        \ 'l:labels',
+        \ 'r:refs:1:0',
+        \ 'p:pagerefs:1:0'
+    \ ],
+    \ 'sort'    : 0
+  \}
 " -- vim-airline settings --
 let g:airline#extensions#whitespace#enabled = 1 " show trailing whitespace errors default: 1
 let g:airline#extensions#whitespace#mixed_indent_algo = 1 " show mixed space/tabs warning default: 0
