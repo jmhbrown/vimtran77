@@ -139,11 +139,11 @@ let g:tagbar_type_tex = {
   \}
 " -- vim-airline settings --
 let g:airline#extensions#whitespace#enabled = 1 " show trailing whitespace errors default: 1
-let g:airline#extensions#whitespace#mixed_indent_algo = 1 " show mixed space/tabs warning default: 0
+let g:airline#extensions#whitespace#mixed_indent_algo = 0 " show mixed space/tabs warning default: 0
 let g:airline#extensions#whitespace#symbol = '⇒'
 let g:airline#extensions#whitespace#trailing_format = 'tr[%s]'
 let g:airline#extensions#whitespace#mixed_indent_format = 'mi[%s]'
-let g:airline#extensions#whitespace#checks = [ 'trailing', 'indent' ]
+let g:airline#extensions#whitespace#checks = [ 'trailing' ]
 let g:airline#extensions#tabline#enabled = 1
 " buffer bar
 function! AirlineInit()
@@ -152,3 +152,24 @@ function! AirlineInit()
   let g:airline_section_z = airline#section#create_right(['l:%l,c:%c'])
 endfunction
 autocmd VimEnter * call AirlineInit()
+
+" Start editing latex files at document start
+autocmd BufRead *.tex 1;/begin{document}
+
+" Reads the contents of a template file into the current buffer 
+function ReadTemplate(filename)
+  let l:filepath = '~/.vim/templates/' . a:filename
+  execute ':0r ' . l:filepath
+endfunction
+
+" Shortcut for standalone-graphic template
+function TemplateStandaloneGraphic()
+  call ReadTemplate('standalone-graphic.tex')
+  execute '/begin{document}'
+endfunction
+
+" Shortcut for default latex template
+function TemplateDefaultLatex()
+  call ReadTemplate('default.tex')
+  execute '/begin{document}'
+endfunction

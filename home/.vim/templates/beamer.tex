@@ -1,0 +1,77 @@
+\documentclass{beamer}
+
+\usepackage{default}
+%\setbeameroption{show notes}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{%
+	\raisebox{5pt}{\makebox[\paperwidth]{\hspace*{5pt}\scriptsize\color{title}\insertsection\; \color{subtitle}\insertsubsection\hfill\makebox[20pt]{\color{gray}
+				\scriptsize\insertframenumber}}}\hspace*{5pt}}
+
+
+\definecolor{title}{RGB}{0,68,103} % Dark Blue
+\definecolor{subtitle}{RGB}{220,100,0} % Red Orange
+\definecolor{teal}{RGB}{0,112,96} % Teal
+\definecolor{redbud}{RGB}{198,0,126} % Magenta
+
+%\setbeamercolor{titlelike}{fg=title}
+%\setbeamercolor{section in toc}{fg=title}
+%\setbeamercolor{subtitle}{fg=subtitle}
+
+
+\setbeamercolor{structure}{fg=teal}
+
+\setbeamercolor{section in toc}{fg=title}
+\setbeamercolor{subsection in toc}{fg=subtitle}
+\setbeamercolor{alerted text}{fg=redbud}
+\setbeamercolor*{palette primary}{fg=title}
+\setbeamercolor*{palette secondary}{fg=subtitle}
+\setbeamercolor*{palette tertiary}{fg=gray!10!white}
+\setbeamercolor*{palette quaternary}{fg=gray}
+
+\setbeamercolor{titlelike}{parent=palette primary}
+\setbeamercolor{frametitle}{fg=teal}
+
+
+\title{Talk Title}
+\author{Jennifer Brown}
+\date{\today}
+
+\begin{document}
+	
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}
+	\tableofcontents
+\end{frame}
+
+\section{First Section}
+\subsection{A Subsection}
+
+\begin{frame}{Frame Title}
+	Slide Text
+	\alert{Alerted Text}
+	\note{}
+\end{frame}
+
+\section{Second Section}
+
+\begin{frame}{Frame Title}
+	\begin{enumerate}
+		\item First
+		\item Second
+	\end{enumerate}
+	
+	\begin{block}{block title}
+		block words
+	\end{block}
+\end{frame}
+
+\section{Third Section}
+
+\begin{frame}
+	
+\end{frame}
+
+\end{document}

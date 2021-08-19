@@ -1,0 +1,28 @@
+\documentclass{standalone}
+
+\usepackage{tikz} % for figures
+%\usetikzlibrary{decorations.pathmorphing} % For squiggles
+%\usetikzlibrary{decorations.markings} % For mid-line arrows
+%\usetikzlibrary{knots} % For knots
+%\usetikzlibrary{calc} % For coordinate calculations
+
+% Snippets
+% Midline arrow: ( requires decorations.markings )
+    % [decoration={markings,mark=at position 0.5 with {\arrow{>}}}]
+    % \draw[postaction={decorate}] (0,0) -- (1,0);
+  % Calc 
+    % ($(1,1)+(60:3mm)$)
+    % ($(1,1)!.5!(0,1)$)
+  % Coordinates
+    % \coordinate (A) at (0,0);
+    % \path (A) ++ (60:3mm) coordinate (B);
+  % Foreach
+    % \foreach \x/\y in {1/1,2/2,3/3,4/3} { \draw (0,0) -- (\x,\y) coordinate (A\x\y); }
+
+\usepackage{xcolor}
+
+\begin{document}
+	
+	
+	
+\end{document}

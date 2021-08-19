@@ -1,0 +1,75 @@
+\documentclass[]{article}
+
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,mathrsfs}
+\usepackage{graphicx}
+\usepackage[font=small]{caption} % Without options this makes it so the stray : is removed for figures with empty captions.
+% \graphicspath{{./figures/}}
+
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\bibliographystyle{alpha}
+
+
+
+\usepackage{tikz}
+% \usetikzlibrary{}
+% \usetikzlibrary{decorations.pathmorphing} % For wiggly lines
+% \usetikzlibrary{decorations.markings} % For mid-line arrows
+% \usetikzlibrary{arrows.meta} % For more arrow options
+
+
+% Todo stuff:
+\usepackage[color=orange!30,bordercolor=magenta,colorinlistoftodos]{todonotes}
+\presetkeys{todonotes}{size=\small}{}
+\newcommand{\todominipage}[2][]{\todo[inline, caption={#1}]{\begin{minipage}{\linewidth}
+			#2			
+		\end{minipage}}}
+
+% Sometimes packages
+% \usepackage{fontawesome} 
+
+% Theorems | Props | Defs | Etc share a counter:
+\newtheorem{counter}{Counter}[section]
+\newtheorem{def:FOO}[counter]{BAR}
+
+% Blackboard Bold Shortcuts
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+
+
+% Looks like \mathbb{1}
+\newcommand{\idty}{\mathrm{1}\mkern-4mu{\mathchoice{}{}{\mskip-0.5mu}{\mskip-1mu}}\mathrm{l}}
+
+% Operators
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Rep}{Rep}
+
+
+% My research shortcuts
+% Building blocks
+\newcommand{\overarrowsplus}{\raisebox{-.6ex}{\tikz[{To[sharp]}-,scale=.3]{	\draw (0,1) -- (1,0);\draw[white,-,line width= 3pt] (1,1) -- (0,0);	\draw (1,1) -- (0,0);}}}
+\newcommand{\overarrowsminus}{\raisebox{-.6ex}{\tikz[{To[]}-,scale=.3]{	\draw (1,1) -- (0,0);\draw[white,-,line width= 3pt] (0,1) -- (1,0);	\draw (0,1) -- (1,0);}}}
+\newcommand{\downcurvearrowleft}{\raisebox{1ex}{\scalebox{-1}{$\curvearrowright$}}}
+\newcommand{\downcurvearrowright}{\raisebox{1ex}{\scalebox{-1}{$\curvearrowleft$}}}
+
+%opening
+\title{}
+\author{Jennifer Brown}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{}
+
+%\bibliography{\jobname.bib}
+
+\end{document}
