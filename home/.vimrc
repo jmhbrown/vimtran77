@@ -17,7 +17,7 @@ set history=1000                " remember more commands and search history
 set undolevels=1000             " use many levels of undo
 set ruler                       " show the cursor position all the time
 set guifont=Courier\ New        " nice font
-set mouse=                      " using mouse disables copying to system clipboard
+set mouse=a                     " part of disabling scroll
 set foldmethod=marker           " use {{{ and }}} to mark folds
 
 " easier window switching
@@ -62,7 +62,7 @@ map <Leader>h :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> t
       \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 
-" Pmenu colors - not working?Q 
+" Pmenu colors - not working?
 " highlight Pmenu guibg=238 gui=bold
 
 " -- nerdtree settings --
@@ -153,10 +153,7 @@ function! AirlineInit()
 endfunction
 autocmd VimEnter * call AirlineInit()
 
-" Start editing latex files at document start
-autocmd BufRead *.tex 1;/begin{document}
-
-" Reads the contents of a template file into the current buffer 
+" Reads the contents of a template file into the current buffer
 function ReadTemplate(filename)
   let l:filepath = '~/.vim/templates/' . a:filename
   execute ':0r ' . l:filepath
