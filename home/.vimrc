@@ -31,7 +31,34 @@ noremap <S-k> <C-w>k
 noremap <S-j> <C-w>j
 noremap <S-t><Left> :tabNext<CR>
 noremap <S-t><Right> :tabnext<CR>
-noremap <S-t>n :tabnew<CR>
+noremap <S-t>n :tab new<CR>
+
+" disable scrolling since I do it on accident
+inoremap <ScrollWheelUp> <nop>
+inoremap <S-ScrollWheelUp> <nop>
+inoremap <C-ScrollWheelUp> <nop>
+inoremap <ScrollWheelDown> <nop>
+inoremap <S-ScrollWheelDown> <nop>
+inoremap <C-ScrollWheelDown> <nop>
+inoremap <ScrollWheelLeft> <nop>
+inoremap <S-ScrollWheelLeft> <nop>
+inoremap <C-ScrollWheelLeft> <nop>
+inoremap <ScrollWheelRight> <nop>
+inoremap <S-ScrollWheelRight> <nop>
+inoremap <C-ScrollWheelRight> <nop>
+
+noremap <ScrollWheelUp> <nop>
+noremap <S-ScrollWheelUp> <nop>
+noremap <C-ScrollWheelUp> <nop>
+noremap <ScrollWheelDown> <nop>
+noremap <S-ScrollWheelDown> <nop>
+noremap <C-ScrollWheelDown> <nop>
+noremap <ScrollWheelLeft> <nop>
+noremap <S-ScrollWheelLeft> <nop>
+noremap <C-ScrollWheelLeft> <nop>
+noremap <ScrollWheelRight> <nop>
+noremap <S-ScrollWheelRight> <nop>
+noremap <C-ScrollWheelRight> <nop>
 
 " highlight current line
 set cursorline
@@ -61,16 +88,16 @@ map <Leader>h :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> t
       \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
       \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-
-" Pmenu colors - not working?
-" highlight Pmenu guibg=238 gui=bold
-
 " -- nerdtree settings --
 let NERDTreeChDirMode=2 " CWD is changed to nerdtree's root. default: 0
 let NERDTreeCasadeOpenSingleChildDir=1 " recursively opens dirs with one child dir. default: 0
-let NERDTreeShowBookmarks=1 " automatically show bookmarks menu. default: 0
 " Makes opening nerdtree faster
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
+"map <Leader>n <plug>NERDTreeTabsToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
+" hide latex build files - reshow these with 'f'
+let g:latexbuildfiles = ['\.synctex.gz$', '\.aux$', '\.bbl$', '\.blg$', '\.fls$', '\.log$', '\.out$','\.toc$','\.fdb_latexmk$']
+let NERDTreeIgnore = latexbuildfiles
+
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "~M",
     \ "Staged"    : "+A",
