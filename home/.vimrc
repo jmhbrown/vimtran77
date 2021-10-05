@@ -98,6 +98,10 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 let g:latexbuildfiles = ['\.synctex.gz$', '\.aux$', '\.bbl$', '\.blg$', '\.fls$', '\.log$', '\.out$','\.toc$','\.fdb_latexmk$']
 let NERDTreeIgnore = latexbuildfiles
 
+let g:vimtex_quickfix_ignore_filters = [
+  \'Underfull \\hbox (badness [0-9]*) in '
+  \]
+
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "~M",
     \ "Staged"    : "+A",
@@ -134,6 +138,7 @@ let g:tagbar_type_bib = {
     \ 'ctagstype' : 'bib',
     \ 'deffile': '~/.vim/ctags/bib.cnf',
     \ 'kinds'     : [
+      \ 's:Section',
       \ 'a:Articles',
       \ 'b:Books',
       \ 'L:Booklets',
@@ -148,7 +153,8 @@ let g:tagbar_type_bib = {
       \ 'p:Proceedings',
       \ 'r:Techreports',
       \ 'u:Unpublished',
-    \]
+    \],
+    \ 'sort'    : 0
   \}
 
 " support for tex
