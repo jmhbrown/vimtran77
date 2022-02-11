@@ -20,6 +20,7 @@ set guifont=Courier\ New        " nice font
 set mouse=a                     " part of disabling scroll
 set foldmethod=marker           " use {{{ and }}} to mark folds
 
+
 " easier window switching
 noremap <S-Left> <C-w>h
 noremap <S-Right> <C-w>l
@@ -165,7 +166,6 @@ let g:tagbar_type_tex = {
         \ 's:sections',
         \ 'g:graphics:0:0',
         \ 'l:labels',
-        \ 'r:refs:1:0',
         \ 'p:pagerefs:1:0'
     \ ],
     \ 'sort'    : 0
