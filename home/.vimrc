@@ -177,11 +177,11 @@ let g:airline#extensions#whitespace#symbol = '⇒'
 let g:airline#extensions#whitespace#trailing_format = 'tr[%s]'
 let g:airline#extensions#whitespace#mixed_indent_format = 'mi[%s]'
 let g:airline#extensions#whitespace#checks = [ 'trailing' ]
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1 " show buffers
 " buffer bar
 function! AirlineInit()
-  let g:airline_section_a = airline#section#create(['<（ ° Д °）'])
-  let g:airline_section_b = airline#section#create(['branch'])
+  "let g:airline_section_a = airline#section#create(['<（ ° Д °）'])
+  let g:airline_section_b = airline#section#create([''])
   let g:airline_section_z = airline#section#create_right(['l:%l,c:%c'])
 endfunction
 autocmd VimEnter * call AirlineInit()
