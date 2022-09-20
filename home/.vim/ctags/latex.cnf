@@ -15,6 +15,7 @@
 --regex-latex=/^[[:space:]]*\\subsection[[:space:]]*\*[[:space:]]*\{([^}]+)\}/│  ├─ \1/s,subsection/
 --regex-latex=/^[[:space:]]*\\subsubsection[[:space:]]*(\[[^]]*\])?[[:space:]]*\{([^}]+)\}/│  │  ├─ \2/s,subsubsection/
 --regex-latex=/^[[:space:]]*\\subsubsection[[:space:]]*\*[[:space:]]*\{([^}]+)\}/│  │  ├─\1/s,subsubsection/
+--regex-latex=/^[[:space:]]*\\begin\{frame\}\{([^}]+)\}/│        ├─ \1/s,frame/
 --regex-latex=/^[[:space:]]*\\includegraphics[[:space:]]*(\[[^]]*\])?[[:space:]]*(\[[^]]*\])?[[:space:]]*\{([^}]+)\}/\3/g,graphic+listing/
 --regex-latex=/^[[:space:]]*\\lstinputlisting[[:space:]]*(\[[^]]*\])?[[:space:]]*(\[[^]]*\])?[[:space:]]*\{([^}]+)\}/\3/g,graphic+listing/
 --regex-latex=/\\label[[:space:]]*\{([^}]+)\}/\1/l,label/

@@ -100,7 +100,8 @@ let g:latexbuildfiles = ['\.synctex.gz$', '\.aux$', '\.bbl$', '\.blg$', '\.fls$'
 let NERDTreeIgnore = latexbuildfiles
 
 let g:vimtex_quickfix_ignore_filters = [
-  \'Underfull \\hbox (badness [0-9]*) in '
+  \'Underfull \\hbox (badness [0-9]*) in ',
+  \'Marginpar on page [0-9]* moved'
   \]
 
 let g:NERDTreeIndicatorMapCustom = {
@@ -164,8 +165,8 @@ let g:tagbar_type_tex = {
     \ 'deffile' : '~/.vim/ctags/latex.cnf',
     \ 'kinds'     : [
         \ 's:sections',
-        \ 'g:graphics:0:0',
-        \ 'l:labels',
+        \ 'g:graphics:1:0',
+        \ 'l:labels:1:2',
         \ 'p:pagerefs:1:0'
     \ ],
     \ 'sort'    : 0
