@@ -25,3 +25,24 @@
 [submodule "home/.vim/bundle/vimtex"]
 	path = home/.vim/bundle/vimtex
 	url = https://github.com/lervag/vimtex.git
+[submodule "home/.vim/bundle/lean.nvim"]
+	path = home/.vim/bundle/lean.nvim
+	url = https://github.com/Julian/lean.nvim.git
+[submodule "home/.vim/bundle/nvim-lspconfig"]
+	path = home/.vim/bundle/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig.git
+[submodule "home/.vim/bundle/plenary.nvim"]
+	path = home/.vim/bundle/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim.git 
+[submodule "home/.vim/bundle/cmp-nvim-lsp"]
+	path = home/.vim/bundle/cmp-nvim-lsp
+	url = https://github.com/hrsh7th/cmp-nvim-lsp.git 
+[submodule "home/.vim/bundle/cmp-buffer"]
+	path = home/.vim/bundle/cmp-buffer
+	url = https://github.com/hrsh7th/cmp-buffer.git 
+[submodule "home/.vim/bundle/cmp-path"]
+	path = home/.vim/bundle/cmp-path
+	url = https://github.com/hrsh7th/cmp-path.git 
+[submodule "home/.vim/bundle/nvim-cmp"]
+	path = home/.vim/bundle/nvim-cmp
+	url = https://github.com/hrsh7th/nvim-cmp.git 
